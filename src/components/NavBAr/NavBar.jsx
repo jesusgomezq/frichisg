@@ -1,7 +1,7 @@
 import React from 'react'
 import logo from "./assets/logo.png"
 import { CartWidget } from '../CartWidget/CartWidget'
-
+import { Link, NavLink } from 'react-router-dom'
 
 export const NavBar = () => {
     return (
@@ -11,30 +11,34 @@ export const NavBar = () => {
                 <div className="navbar-brand">
                     <figure className="navbar-item" href="https://bulma.io">
                         <img src={logo} width="40" height="" alt='logo' />
-                        <div >
-                            Frichis'Gaming
-                        </div>
+                        <Link to='/'>
+                            <h3>Frichis'Gaming</h3>
+                        </Link>
                     </figure>
                 </div>
 
-                <div id="navbarBasicExample" className="navbar-menu">
+                <div id="navbarBasicExample" className={({ isActive }) => isActive ? 'ActiveOption' : 'Option'}>
                     <div className="navbar-end">
-                        <a className="navbar-item">
-                            Inicio
-                        </a>
+                        <NavLink to={`/category/men's clothing`} className={({ isActive }) => isActive ? 'ActiveOption' : 'Option'}>
+                            Ropa de caballeros
+                        </NavLink>
 
-                        <a className="navbar-item">
-                            Juegos
-                        </a>
+                        <NavLink to={`/category/women's clothing`} className={({ isActive }) => isActive ? 'ActiveOption' : 'Option'}>
+                            Ropa de damas
+                        </NavLink>
 
-                        <a className="navbar-item">
-                            Tienda
-                        </a>
+                        <NavLink to={`/category/electronics`} className="navbar-item">
+                            Electronica
+                        </NavLink>
+
+                        <NavLink to={`/category/jewelery`} className="navbar-item">
+                            Accesorios
+                        </NavLink>
                     </div>
 
                     <div className="navbar-end">
                         <div className="navbar-item">
-                            <CartWidget/>
+                            <CartWidget />
                         </div>
                     </div>
                 </div>
