@@ -17,7 +17,7 @@ export const NavBar = () => {
                     </figure>
                 </div>
 
-                <div id="navbarBasicExample" className={({ isActive }) => isActive ? 'ActiveOption' : 'Option'}>
+                <div id="navbarBasicExample" className="Categories">
                     <div className="navbar-end">
                         <NavLink to={`/category/men's clothing`} className={({ isActive }) => isActive ? 'ActiveOption' : 'Option'}>
                             Ropa de caballeros

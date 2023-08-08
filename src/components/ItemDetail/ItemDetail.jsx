@@ -1,5 +1,6 @@
 import React from 'react'
 import { ItemCount } from '../ItemCount/ItemCount'
+import "./ItemDetail.css"
 
 export const ItemDetail = ({id,image, name, category, description, price, stock}) => {
   return (
@@ -17,10 +18,13 @@ export const ItemDetail = ({id,image, name, category, description, price, stock}
                 Categoria: {category}
             </p>
             <p className='Info'>
-                Descripcon: {description}
+                Descripcion: {description}
             </p>
             <p className='Info'>
                 Precio: ${price} 
+            </p>
+            <p>
+                Cantidad disponible: {stock}
             </p>
         </section>
         <footer className='ItemFooter'>

@@ -9,7 +9,7 @@ function App() {
   return (
     <div className="App">
       <BrowserRouter>
-        <NavBar />
+        <NavBar/>
         <Routes>
           <Route path="/" element={<ItemListContainer />} greeting={'Hola, soy una App de video juegos'} />
           <Route path="/category/:categoryId" element={<ItemListContainer />} />
