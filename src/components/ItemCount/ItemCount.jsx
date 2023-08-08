@@ -23,11 +23,11 @@ export const ItemCount = ({ stock, initial, onAdd }) => {
         <div className='Contador'>
             <div className='Controles'>
                 <button className='Boton' onClick={disminuir}>-</button>
-                <h4 className='Numero'>{initial}</h4>
+                <h4 className='Numero'>{quantity}</h4>
                 <button className='Boton' onClick={incrementar}>+</button>
             </div>
             <div>
-                <button className='Boton' onClick={() => {onAdd(quantity)}} disabled={!stock}>
+                <button className='Boton' onClick={() => onAdd(quantity)} disabled={!stock}>
                     Agregar al carrito
                 </button>
             </div>

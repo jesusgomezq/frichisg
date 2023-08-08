@@ -1,7 +1,6 @@
-.ListGroup{
-    background-color: aqua;
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.ListGroup {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-auto-rows: auto;
+    row-gap: 10px;
 }

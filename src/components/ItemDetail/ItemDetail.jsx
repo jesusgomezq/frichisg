@@ -2,16 +2,16 @@ import React from 'react'
 import { ItemCount } from '../ItemCount/ItemCount'
 import "./ItemDetail.css"
 
-export const ItemDetail = ({id,image, name, category, description, price, stock}) => {
+export const ItemDetail = ({id,image, title, category, description, price, stock}) => {
   return (
     <article className='CardItem'>
         <header className='Header'>
             <h2 className='ItemHeader'>
-                {name}
+                {title}
             </h2>
         </header>
         <picture>
-            <img src={image} alt={name} className='ItemImg' />
+            <img src={image} alt={title} className='ItemImg' />
         </picture>
         <section>
             <p className='Info'>

@@ -2,23 +2,23 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import './Item.css'
 
-export const Item = ({ id, name, image, stock, price }) => {
+export const Item = ({ id, title, image, stock, price }) => {
     return (
         <article className='CardItem'>
             <header className='Header'>
-                <h2 className='ItemHeader'>
-                    {name}
-                </h2>
+                <h3 className='ItemHeader'>
+                    {title}
+                </h3>
             </header>
             <picture>
-                <img src={image} alt={name} className='ItemImg' />
+                <img src={image}  alt={title} className='ItemImg' />
             </picture>
             <section>
                 <p className='Info'>
-                    Precio: ${price}
+                    Precio ${price}
                 </p>
                 <p className='info'>
-                    Stock disponible: {stock}
+                    Disponibles: {stock}
                 </p>
             </section>
             <footer className='ItemFooter'>

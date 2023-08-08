@@ -1,5 +1,6 @@
 .CardItem{
-    margin: 40px;
+    width: 90%;
+    margin: 20px;
     padding: 20px;
     text-align: center;
     border-radius: 10px;
@@ -7,5 +8,9 @@
 }
 
 img{
-    width: 40%;
+    width: 20%;
+}
+
+section p{
+    font-size: 24px;
 }
