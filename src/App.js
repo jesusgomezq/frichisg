@@ -4,12 +4,18 @@ import { ItemListContainer } from "./components/ItemListContainer/ItemListContai
 import { ItemDetailContainer } from "./components/ItemDetailContainer/ItemDetailContainer";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Footer from "./components/Footer/Footer";
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { HeroNav } from "./components/HeroNav/HeroNav";
+import { SideBar } from "./components/SideBar/SideBar";
+import './App.css'
 
 function App() {
   return (
     <div className="App">
       <BrowserRouter>
         <NavBar/>
+        <HeroNav/>
+        <SideBar/>
         <Routes>
           <Route path="/" element={<ItemListContainer />} greeting={'Hola, soy una App de video juegos'} />
           <Route path="/category/:categoryId" element={<ItemListContainer />} />

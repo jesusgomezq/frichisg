@@ -1,6 +1,7 @@
 .ListGroup {
+    width: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-auto-rows: auto;
-    row-gap: 10px;
+    /* grid-auto-rows: auto; */
+    /* row-gap: 10px; */
 }
