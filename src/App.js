@@ -8,21 +8,28 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { HeroNav } from "./components/HeroNav/HeroNav";
 import { SideBar } from "./components/SideBar/SideBar";
 import './App.css'
+import {Cart} from './components/Cart/Cart'
+import {CartProvider} from './context/CartContext'
 
 function App() {
   return (
     <div className="App">
       <BrowserRouter>
-        <NavBar/>
-        <HeroNav/>
-        <SideBar/>
-        <Routes>
-          <Route path="/" element={<ItemListContainer />} greeting={'Hola, soy una App de video juegos'} />
-          <Route path="/category/:categoryId" element={<ItemListContainer />} />
-          <Route path="/item/:itemId" element={<ItemDetailContainer />} />
-          <Route path="*" element={<h1>404 NOT FOUND</h1>} />
-        </Routes>
-        <Footer/>
+        <CartProvider>
+          <NavBar />
+          <div className="App_side">
+            <HeroNav />
+            <SideBar />
+          </div>
+          <Routes>
+            <Route path="/" element={<ItemListContainer />} greeting={'Hola, soy una App de video juegos'} />
+            <Route path="/category/:categoryId" element={<ItemListContainer />} />
+            <Route path="/item/:itemId" element={<ItemDetailContainer />} />
+            <Route path="/cart" element={<Cart/>}/>
+            <Route path="*" element={<h1>404 NOT FOUND</h1>} />
+          </Routes>
+          <Footer />
+        </CartProvider>
       </BrowserRouter>
     </div>
   );

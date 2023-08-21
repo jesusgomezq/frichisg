@@ -1,0 +1,43 @@
+.navbar {
+    display: flex;
+    justify-content: space-around;
+    /* background-color: aqua; */
+    align-items: center;
+}
+
+.navbar-brand{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 100px;
+}
+
+.Logo{
+    width: 50px;
+}
+
+.Buscador{
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.Buscador_input{
+    border: none;
+    background-color: gainsboro;
+    width: 60%;
+    height: 30px;
+    border-radius: 30px;
+    padding: 20px;
+    text-align: center;
+}
+
+.Carrito{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100px;
+}
