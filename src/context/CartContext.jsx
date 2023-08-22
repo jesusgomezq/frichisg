@@ -10,33 +10,40 @@ export const CartProvider = ({ children }) => {
 
     console.log(cart);
 
-    const addItem = (item, quantity) => {
+    // agregamos un producto al carrito 
+    const addItem = (productos, quantity) => {
 
-        if (!isInCart(item.id)) {
-            setCart(prev => [...prev, { ...item, quantity }])
+        if (!isInCart(productos.id)) {
+            setCart(prev => [...prev, { ...productos, quantity }])
         } else {
             console.error('El producto ya fue agregado')
         }
     }
 
-    const removeItem = (itemId) => {
+    // Removemos un producto del carrito 
+    const removeItem = (productosId) => {
 
-        const cartUpdate = cart.filter(produc => produc.id !== itemId)
+        const cartUpdate = cart.filter(produc => produc.id !== productosId)
         setCart(cartUpdate)
     }
 
+    // Limpiamos el carrito 
     const clearCart = () => {
 
         setCart([])
     }
 
-    const isInCart = (itemId) => {
+    const total = () => {
+        cart.reduce((total, product) => total + product.price * product.quantity, 0)
+    }
 
-        return cart.some(prod => prod.id === itemId)
+    const isInCart = (productosId) => {
+
+        return cart.some(prod => prod.id === productosId)
     }
 
     return (
-        <CartContext.Provider value={{ cart, addItem, removeItem, clearCart, }}>
+        <CartContext.Provider value= {{cart, addItem, removeItem, clearCart, total }}>
             {children}
         </CartContext.Provider>
     )

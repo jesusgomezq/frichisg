@@ -14,3 +14,16 @@ img{
 section p{
     font-size: 24px;
 }
+
+.Option{
+    font-size: 24px;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    border-radius: 10px;
+    padding: 10px;
+    border: none;
+    background-color: #424e5e;
+    color: whitesmoke;
+    text-decoration: none;
+}

@@ -7,11 +7,11 @@ import { Link } from 'react-router-dom'
 export const CartWidget = () => {
 
   const { totalQuantity } = useContext(CartContext)
+  const { quantity} = useContext(CartContext)
 
   return (
-    
     <Link to='/cart' className='Card' >
-      <span className='Numero'>0</span>
+      <span className='Numero'>{quantity}</span>
       <img className='Carrito_logo' src={carrito} alt="carrito" />
       {totalQuantity}
     </Link>

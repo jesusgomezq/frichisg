@@ -12,11 +12,11 @@ export const ItemDetail = ({ id, image, title, category, description, price, sto
     const handleOnAdd = (quantity) => {
         setQuantityAdded(quantity)
 
-        const item = {
+        const productos = {
             id, title, price
         }
 
-        addItem(item, quantity)
+        addItem(productos, quantity)
     }
 
     return (
