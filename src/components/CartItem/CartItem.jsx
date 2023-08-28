@@ -3,9 +3,9 @@ import { CartContext } from '../../context/CartContext'
 import './CartItem.css'
 
 
-export const CartItem = ({ id, price, image, title, quantity, total}) => {
+export const CartItem = ({ id, price, image, title, quantity}) => {
 
-  const { removeItem} = useContext(CartContext)
+  const { removeItem, total } = useContext(CartContext)
 
   return (
 
@@ -21,32 +21,27 @@ export const CartItem = ({ id, price, image, title, quantity, total}) => {
         <img src={image} alt={title} className='ItemImg' />
       </picture>
       <section>
-        <p className='InfoCart'>
-          Precio: ${price}
-        </p>
-      </section>
-
-      <section>
-        <h4 className='InfoCart'>Cantidad</h4>
-        <h6 className='InfoCart'>
-          {quantity}
-        </h6>
-      </section>
-
-      <section>
-        <h4 className='InfoCart'>Subtotal</h4>
-        <h6 className='InfoCart'>
-          ${price * quantity}
-        </h6>
-      </section>
-
-      <section>
         <h3 className='InfoCart'>
-          Total: ${total}
+          Precio: ${price}
         </h3>
       </section>
+
       <section>
-        <button className='btn btn-danger ' onClick={() => removeItem(id)}>X</button>
+        <h4 className='InfoCart'>
+          Cantidad: {quantity}
+        </h4>
+      </section>
+      <section>
+        <h4 className='InfoCart'>
+          Subtotal: ${price * quantity}
+        </h4>
+      </section>
+    
+      <section>
+      <h3>Total a pagar: ${total}</h3> 
+      </section>
+      <section>
+        <button className='btn btn-danger ' onClick={() => removeItem(id)}>Eliminar</button>
       </section>
     </article>
 

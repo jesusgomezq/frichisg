@@ -1,5 +1,5 @@
 .Categorias {
-    margin: 30px 10px 0 80px ;
+    margin: 30px 10px 60px 80px ;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -7,14 +7,20 @@
     gap: 30px;
     width: 5%;
     height: 100%;
-    background-color: antiquewhite;
+    text-decoration: none;
+}
+
+.Ancla{
+    text-decoration: none;
+    color: aliceblue;
 }
 
 .subCate{
+   
     width:50px;
     height: 50px;
     border-radius: 100%;
-    border: solid 1px red;
+    border: solid 1px #102744;
     display: flex;
     justify-content: center;
     align-items: center;

@@ -13,7 +13,8 @@ export const ItemDetail = ({ id, image, title, category, description, price, sto
         setQuantityAdded(quantity)
 
         const productos = {
-            id, title, price
+            
+            id, title, price, image
         }
 
         addItem(productos, quantity)

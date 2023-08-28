@@ -1,8 +1,10 @@
 .CartItem{
-    width: 60%;
+    width: 100%;
     margin: 20px;
     padding: 20px;
-    text-align: center;
-    border-radius: 10px;
-    box-shadow: 4px 4px 6px rgb(0, 0, 0, 0.4);
+    display: flex;
+    background-color: aqua;
+    /* text-align: center; */
+    /* border-radius: 10px; */
+    /* box-shadow: 4px 4px 6px rgb(0, 0, 0, 0.4); */
 }

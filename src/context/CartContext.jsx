@@ -13,8 +13,9 @@ export const CartProvider = ({ children }) => {
     // agregamos un producto al carrito 
     const addItem = (productos, quantity) => {
 
+
         if (!isInCart(productos.id)) {
-            setCart(prev => [...prev, { ...productos, quantity }])
+            setCart(prev => [ ...prev, { ...productos, quantity }])
         } else {
             console.error('El producto ya fue agregado')
         }
@@ -32,18 +33,23 @@ export const CartProvider = ({ children }) => {
 
         setCart([])
     }
-
-    const total = () => {
-        cart.reduce((total, product) => total + product.price * product.quantity, 0)
+    
+    // Funcion para no repetir productos en el carrito 
+    const isInCart = (productId) => {
+        
+        return cart.some(prod => prod.id === productId)
     }
+    
+    // variable para calcular el total de la compra 
+    const total = Number.parseFloat(cart.reduce((acc, product)=> acc + product.price * product.quantity, 0)).toFixed(2)
 
-    const isInCart = (productosId) => {
-
-        return cart.some(prod => prod.id === productosId)
+    // funcion para simplificar el value 
+    const value = {
+        cart, addItem, removeItem, clearCart, total , isInCart
     }
 
     return (
-        <CartContext.Provider value= {{cart, addItem, removeItem, clearCart, total }}>
+        <CartContext.Provider value= {value}>
             {children}
         </CartContext.Provider>
     )

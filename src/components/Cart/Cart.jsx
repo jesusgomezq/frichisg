@@ -8,7 +8,8 @@ import './Cart.css'
 export const Cart = () => {
 
     const { cart, clearCart, totalQuantity} = useContext(CartContext)
-
+    
+    // condicion para cuando no hayan productos en el carrito 
     if (totalQuantity === 0) {
         return (
             <div>
@@ -21,10 +22,12 @@ export const Cart = () => {
     }
 
     return (
-        <div className='Cart'>
+        <div className='CartVew'>
             {cart.map(produc => <CartItem key={produc.id} {...produc} />)}
-            <button onClick={() => clearCart()} className='Boton'>Limpiar carrito</button>
-            <Link to='/checkout' className='Option'>Checkout</Link>
+            <div className='CartFooter'>
+                <button onClick={() => clearCart()} className='Boton'>Limpiar carrito</button>
+                <Link to='/checkout' className='Boton'>Checkout</Link>
+            </div>
         </div>
     )
 

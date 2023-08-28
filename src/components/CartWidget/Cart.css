@@ -3,9 +3,11 @@
     flex-direction: column;
     justify-content: baseline;
     align-items: center;
+    text-decoration: none;
 }
 
 .Numero{
+
     background-color: red;
     width: 15px;
     height: 16px;
