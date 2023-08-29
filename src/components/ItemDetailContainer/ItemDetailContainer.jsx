@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react'
 import { ItemDetail } from '../ItemDetail/ItemDetail'
 import { useParams } from 'react-router-dom'
 import './ItemDetailContainer.css'
-import { getDoc, doc } from 'firebase/firestore'
+import { getDoc, doc} from 'firebase/firestore'
 import { db } from '../../services/firebase/firebaseConfig'
 import { Loader } from '../Loader/Loader'
 
@@ -11,15 +11,17 @@ import { Loader } from '../Loader/Loader'
 
 export const ItemDetailContainer = () => {
 
-    const [productos, setProductos] = useState(null)
+    const [producto, setProductos] = useState(null)
     const [loader, setLoader] = useState(true)
     const { itemId } = useParams()
 
     // const valor = parseInt(itemId)
 
+
     useEffect(() => {
         setLoader(true)
-        // getProductosById(valor)
+       
+
         const docRef = doc(db, 'productos', itemId)
 
         getDoc(docRef)
@@ -33,15 +35,16 @@ export const ItemDetailContainer = () => {
             })
             .finally(() => {
                 setLoader(false)
-            })
+            }, 1000)
     }, [itemId])
+
+
 
     return (
         <div className='ItemDetailContainer'>
             {loader
                 ? <Loader />
-                :
-                <ItemDetail {...productos} />
+                : <ItemDetail {...producto} />
             }
         </div>
     )

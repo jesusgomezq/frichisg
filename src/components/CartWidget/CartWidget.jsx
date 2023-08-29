@@ -12,7 +12,6 @@ export const CartWidget = () => {
     <Link to='/cart' className='Card' >
       <span className='Numero'>{cart.length}</span>
       <img className='Carrito_logo' src={carrito} alt="carrito" />
-      {/* {isInCart} */}
     </Link>
   )
 }

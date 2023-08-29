@@ -21,15 +21,15 @@ export const ItemListContainer = ({ greeting }) => {
 
   useEffect(() => {
     setLoader(true)
-    
-    const collectionRef = categoryId
 
+
+
+    const collectionRef = categoryId
       ? query(collection(db, 'productos'), where('category', '==', categoryId))
       : collection(db, 'productos')
 
     getDocs(collectionRef)
       .then(response => {
-
         const productosAdapted = response.docs.map(doc => {
           const data = doc.data()
           return { id: doc.id, ...data }
@@ -44,18 +44,17 @@ export const ItemListContainer = ({ greeting }) => {
 
       .finally(() => {
         setLoader(false)
-      })
+      }, 1000)
 
   }, [categoryId])
 
   return (
     <div className='title is-1 has-text-centered Container'>
-      
+
       <h1>{greeting}</h1>
       {loader
         ? <Loader />
-        :
-        <ItemList productos={productos} />
+        : <ItemList productos={productos} />
       }
     </div>
   )

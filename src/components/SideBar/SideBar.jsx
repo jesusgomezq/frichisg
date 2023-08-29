@@ -6,23 +6,23 @@ export const SideBar = () => {
   return (
     <div className='Categorias'>
       <div className='subCate'>
-        <NavLink to={`/category/men's clothing`} className="Ancla">
-          Ropa Hombre
+        <NavLink to={`/category/disparo`} className="Ancla">
+          Disparo
         </NavLink>
       </div>
       <div className='subCate'>
-        <NavLink to={`/category/women's clothing`} className="Ancla">
-          Ropa Mujer
+        <NavLink to={`/category/carreras`} className="Ancla">
+          Carrera
         </NavLink>
       </div>
       <div className='subCate'>
-        <NavLink to={`/category/electronics`} className="Ancla">
-          Electronica
+        <NavLink to={`/category/deportes`} className="Ancla">
+          Deportes
         </NavLink>
       </div>
       <div className='subCate'>
-        <NavLink to={`/category/jewelery`} className="Ancla">
-          Accesorios
+        <NavLink to={`/category/aventura`} className="Ancla">
+          Aventura
         </NavLink>
       </div>
       <div className='subCate'>

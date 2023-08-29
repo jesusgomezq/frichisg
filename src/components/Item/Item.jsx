@@ -6,9 +6,9 @@ export const Item = ({ id, title, image, stock, price }) => {
     return (
         <article className='CardItem'>
             <header className='Header'>
-                <h3 className='ItemHeader'>
+                <h4 className='ItemHeader'>
                     {title}
-                </h3>
+                </h4>
             </header>
             <picture>
                 <img src={image}  alt={title} className='ItemImg' />
