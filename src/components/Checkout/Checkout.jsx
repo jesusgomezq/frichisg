@@ -19,7 +19,7 @@ export const Checkout = () => {
                 comprador: {
                     nombre, telefono, correo
                 },
-                itams: cart,
+                items: cart,
                 total: total,
                 date: Timestamp.fromDate(new Date())
             }

@@ -37,6 +37,9 @@ export const CheckoutForm = ({onConfirm}) => {
                         value={correo}
                         onChange={({ target }) => setCorreo(target.value)} />
                 </label>
+                <div className='Label'>
+                    <button type='submit' className='Boton'>Generar Pedido</button>
+                </div>
             </form>
         </div>
     )

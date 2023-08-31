@@ -1,19 +1,21 @@
 import React from 'react'
-import { BallTriangle } from 'react-loader-spinner'
+import { Dna } from 'react-loader-spinner'
+import './Loader.css'
 
 export const Loader = () => {
-    return (
-        <div>
-            <BallTriangle
-                height={100}
-                width={100}
-                radius={5}
-                color="#4fa94d"
-                ariaLabel="ball-triangle-loading"
-                wrapperClass={{}}
-                wrapperStyle=""
-                visible={true}
-            />
-        </div>
-    )
+  return (
+
+      <Dna
+        visible={true}
+        height="500"
+        width="250"
+        ariaLabel="dna-loading"
+        wrapperStyle={{}}
+        wrapperClass="dna-wrapper"
+      />
+    
+    
+
+    
+  )
 }

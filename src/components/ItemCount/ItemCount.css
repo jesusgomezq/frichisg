@@ -15,16 +15,16 @@
 }
 
 .Boton {
-    border-radius: 10px;
+    border-radius: 30px;
     padding: 10px;
-    border: none;
-    background-color: #424e5e;
-    color: whitesmoke;
+    border: solid 1px green;
+    /* background-color: #424e5e; */
+    color: green;
     text-decoration: none;
 }
 
 .numero{
-    color: aliceblue;
+    color: green;
     display: flex;
     justify-content: center;
     align-items: center;

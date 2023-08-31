@@ -19,10 +19,6 @@ function App() {
       <BrowserRouter>
         <CartProvider>
           <NavBar />
-          <div className="App_side">
-            <HeroNav />
-            <SideBar />
-          </div>
           <Routes>
             <Route path="/" element={<ItemListContainer />} greeting={'Hola, soy una App de video juegos'} />
             <Route path="/category/:categoryId" element={<ItemListContainer />} />

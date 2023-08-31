@@ -1,25 +1,63 @@
 .CardItem {
     width: 100%;
-    margin: 10px;
     padding: 20px;
     text-align: center;
     border-radius: 20px;
+    /* background-color: antiquewhite; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.CardItem .HeaderItem{
+    /* background-color: #424e5e; */
+    width: 90%;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.CardItem .HeaderItem .ItemImg{
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    border-radius: 18px;
 }
 
 
-.Info{
-    margin: 10px;
-    font-size: 18px;
+.CardItem .Titulo {
+    margin: 5px;
+    text-align: center;
 }
 
-.ItemFooter .Option button{
+.CardItem .infoItem{
+    font-size: 15px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    font-weight: 600;
+    padding: 10px;
+}
+
+
+.CardItem .precioItem{
+    font-weight: bold;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    color: forestgreen;
+}
+
+.ItemFooter .OptionDetalle button {
     font-size: 24px;
     padding: 10px;
     border: none;
-    border-radius: 10px;
-    border-radius: 10px;
+    border-radius: 40px;
     padding: 10px;
     border: none;
-    background-color: #424e5e;
-    color: whitesmoke;
+    border: solid 1px forestgreen;
+    /* background-color: #424e5e; */
+    color: forestgreen;
 }
