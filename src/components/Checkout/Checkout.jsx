@@ -1,8 +1,12 @@
-import React, { useContext, useState } from 'react'
+import React, { useContext, useState, useEffect } from 'react'
 import { collection, getDocs, query, where, Timestamp, writeBatch, addDoc, documentId } from 'firebase/firestore'
 import { db } from '../../services/firebase/firebaseConfig'
 import { CartContext } from '../../context/CartContext'
 import { CheckoutForm } from '../CheckoutForm/CheckoutForm'
+import Swal from 'sweetalert2'
+// import { Link } from 'react-router-dom'
+
+
 
 export const Checkout = () => {
     const [loader, setLoader] = useState(false)
@@ -10,7 +14,7 @@ export const Checkout = () => {
 
     const { cart, total, clearCart } = useContext(CartContext)
 
-    const createOrder = async ({ nombre, telefono, correo }) => {
+    const createOrder = async ({ nombre, telefono, correo}) => {
 
         setLoader(true)
 
@@ -38,7 +42,7 @@ export const Checkout = () => {
                 const dataDoc = doc.data()
                 const stockDb = dataDoc.stock
 
-                const productAddedToCart = cart.find(prod => prod.i === doc.id)
+                const productAddedToCart = cart.find(prod => prod.id === doc.id)
                 const prodQuantity = productAddedToCart?.quantity
 
                 if (stockDb >= prodQuantity) {
@@ -69,15 +73,39 @@ export const Checkout = () => {
         }
     }
 
+    const redirectToInicio = () => {
+        window.location.href = '/';
 
-
-    if (loader) {
-        return <h1>Se esta generando su compra</h1>
     }
+    useEffect(() => {
+        if (!loader && orderId) {
+            Swal.fire({
+                title: "PEDIDO REALIZADO",
+                text: `EL ID DE SU PEDIDO ES : ${orderId}`,
+                icon: "success",
+                confirmButtonText: "IR AL INICIO",
+                customClass: {
+                    confirmButton: "button is-success is-rounded"
+                },
+                onClose: () => {
+                    redirectToInicio();
+                }
+            });
+        } else if (loader) {
+            Swal.fire({
+                title: "GENERANDO ID DE SU PEDIDO",
+                text: "ESPERE MIENTRAS SE GENERA SU ID...",
+                allowOutsideClick: false,
+                customClass: {
+                    confirmButton: "button is-success is-rounded"
+                },
+                onBeforeOpen: () => {
+                    Swal.showLoading();
+                }
+            });
+        }
+    }, [loader, orderId]);
 
-    if (orderId) {
-        return <h1>Su oreden es: {orderId}</h1>
-    }
     return (
         <div>
             <h1>Checkout</h1>

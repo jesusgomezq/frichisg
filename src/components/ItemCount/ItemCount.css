@@ -1,31 +1,47 @@
 .Contador {
+    width: 100%;
     display: flex;
-    flex-direction: column;
-    align-items: center;
     justify-content: center;
+    justify-content: space-between;
+    gap: 20px;
 }
 
 .Controles {
-    width: 35%;
+    width: 100%;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
     align-items: center;
-    margin: 20px;
-    padding: auto;
+    border: 1px solid #2abccc;
+    border-radius: 40px;
 }
 
-.Boton {
-    border-radius: 30px;
-    padding: 10px;
-    border: solid 1px green;
-    /* background-color: #424e5e; */
-    color: green;
-    text-decoration: none;
+.Contador .Botones {
+    border: none;
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    background-color: #2abccc;
+    color: aliceblue;
 }
 
-.numero{
-    color: green;
+.numero {
+    color: #2abccc;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.Contador .AddToCard {
+    width: 100%;
+    display: grid;
+    place-items: center;
+}
+
+.Contador .botonAdd {
+    border: solid 1px #2abccc;
+    border-radius: 40px;
+    width: 100%;
+    color: #2abccc;
+    background-color: white;
+    
 }

@@ -24,9 +24,13 @@ export const Cart = () => {
     return (
         <div className='CartVew'>
             {cart.map(produc => <CartItem key={produc.id} {...produc} />)}
-            <div className='CartFooter'>
-                <button onClick={() => clearCart()} className='Boton'>Limpiar carrito</button>
-                <Link to='/checkout' className='Boton'>Checkout</Link>
+            <div className='contenedorBotones'>
+                <div className='LimpiarCarrito'>
+                <button onClick={() => clearCart()} className='CartFooter'>Limpiar carrito</button>
+                </div>
+                <div className='BotonChek'>
+                <Link className='Check' to='/checkout'>Checkout</Link>
+                </div>
             </div>
         </div>
     )

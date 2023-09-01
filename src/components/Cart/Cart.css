@@ -1,18 +1,44 @@
 .CartVew {
-    display: flex;
-    gap: 10px;
-    justify-content: center;
-    align-items: center;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.Option {
-    margin-bottom: 10px;
+.contenedorBotones {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  gap: 40px;
 }
 
-.CartFooter {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    margin-bottom: 20px;
+.CartVew .CartFooter {
+  font-size: 20px;
+  padding: 10px;
+  border: none;
+  border-radius: 40px;
+  padding: 10px;
+  border: solid 1px #2abccc;
+  background-color: none;
+  color: #2abccc;
+  font-weight: 400;
+}
+
+.CartVew .BotonChek{
+  width: 16%;
+  height: 51px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #2abccc;
+  border-radius: 40px;
+  background-color: gainsboro;
+}
+
+.CartVew .Check{
+  text-decoration: none;
+  color: #2abccc;
+  font-weight: 400;
+  font-size: 20px;
 }

@@ -13,7 +13,7 @@ export const ItemDetail = ({ id, image, title, category, description, price, sto
         setQuantityAdded(quantity)
 
         const productos = {
-            
+
             id, title, price, image
         }
 
@@ -21,39 +21,39 @@ export const ItemDetail = ({ id, image, title, category, description, price, sto
     }
 
     return (
-        <article className='CardItem'>
-            <header className='Header'>
-                <h2 className='ItemHeader'>
+        <article className='ItemDetail'>
+            <div className='ImgContainer'>
+                <img src={image} alt={title} className='DetailImg' />
+            </div>
+            <div className='HeaderDetail'>
+                <h2 className='DetailTitle'>
                     {title}
                 </h2>
-            </header>
-            <picture>
-                <img src={image} alt={title} className='ItemImg' />
-            </picture>
-            <section>
-                <p className='Info'>
-                    Categoria: {category}
-                </p>
-                <p className='Info'>
-                    Descripcion: {description}
-                </p>
-                <p className='Info'>
-                    Precio: ${price}
-                </p>
-                <p>
-                    Cantidad disponible: {stock}
-                </p>
-            </section>
-            <footer className='ItemFooter'>
-                {
-                    quantityAdded > 0 ? (
-                        <Link to='/cart' className='Option' >Finalizar compra</Link>
-                    ) : (
+                <div className='DetailBody'>
+                    <p className='DetailCate'>
+                        Categoria: {category}
+                    </p>
+                    <p className='DetailDesc'>
+                        Descripcion: {description}
+                    </p>
+                    <p className='DetailPrice'>
+                        Precio: ${price}
+                    </p>
+                    <p className='ItemDispo'>
+                        Cantidad disponible: {stock}
+                    </p>
+                </div>
+                <footer className='ItemFooter'>
+                    {
+                        quantityAdded > 0 ? (
+                            <Link to='/cart' className='BotonFinalizar' >Finalizar compra</Link>
+                        ) : (
 
-                        <ItemCount initial={1} stock={stock} onAdd={handleOnAdd} />
-                    )
-                }
-            </footer>
+                            <ItemCount initial={1} stock={stock} onAdd={handleOnAdd} />
+                        )
+                    }
+                </footer>
+            </div>
         </article>
     )
 }

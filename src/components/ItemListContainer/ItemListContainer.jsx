@@ -1,7 +1,5 @@
 import React, { useEffect, useState } from 'react'
-// import { getProductos, getProductosByCategory } from '../../asynkMock'
 import { ItemList } from '../ItemList/ItemList'
-import {SideBar} from '../SideBar/SideBar'
 import { useParams } from 'react-router-dom'
 import './ItemListContainer.css'
 import { getDocs, collection, query, where } from 'firebase/firestore'
@@ -51,7 +49,6 @@ export const ItemListContainer = ({ greeting }) => {
 
   return (
     <div className='title is-1 has-text-centered Container'>
-
       <h1>{greeting}</h1>
       {loader
         ? <Loader />

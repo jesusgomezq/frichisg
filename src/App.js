@@ -5,8 +5,6 @@ import { ItemDetailContainer } from "./components/ItemDetailContainer/ItemDetail
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Footer from "./components/Footer/Footer";
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { HeroNav } from "./components/HeroNav/HeroNav";
-import { SideBar } from "./components/SideBar/SideBar";
 import './App.css'
 import { Cart } from './components/Cart/Cart'
 import { CartProvider } from './context/CartContext'
