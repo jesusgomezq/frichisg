@@ -71,6 +71,11 @@
     align-items: end;
     color: #2abccc;
     font-weight: 600;
+    font-size: 20px;
+}
+
+.Ancla:hover{
+    border-bottom: 1px solid #2abccc;
 }
 
 

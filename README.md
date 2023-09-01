@@ -11,7 +11,7 @@ Todas las imagenes fueron usadas atrves de URLS de google ya que no contaba con 
 En la app usamos todas las dependencias de react, sus hooks entre otros
 Es una app bastante interactiva, facil de usar 
 
-NOTA:  Como dije antes, el responsive me falto, pero bueno sera solucionado ya que pienso usar esta app como modelo de portfolio a futuro, asi como arreglar el diseño, que realmente no es lo mio, pero bueno intente hacer lo mejor que puede.
+NOTA:  Como dije antes, el responsive me falto, pero bueno sera solucionado ya que pienso usar esta app como modelo de portfolio a futuro, asi como arreglar el diseño, que realmente no es lo mio y el input de busqueda que esta de adorno porque o tiene funcionalidad, con calma despues me siento y busco bien como hacerlo funcionar, pero bueno intente hacer lo mejor que puede.
 
 Graicas 
 
