@@ -1,4 +1,22 @@
-# Getting Started with Create React App
+Bueno, empezamos..
+Soy jesus, les presento mi app de video juegos. App que simula una venta virtual de algunos video juegos para pc, playstation o xbox.
+En esta app use algunas herramientas como bulma, reactBootstrap, reacIcon, reactLoderSpeener.
+Basicamente la unica herramimenta que se puede apreciar es el speener, las demas al final las instale pero no las use. 
+
+Los estilos estan todos hechos con Css nativo(por asi decirlo), como puedes apreciar aun no pude hacerle el responsive, intente pero bueno no llegue. capaz me baje la nota, pero bueno...
+
+use como base de datos firebase, donde fueron agregados todos los items en una coleccion llamda productos y renderizada en ItemLisContainer y el en el ItemDetailContainer
+Todas las imagenes fueron usadas atrves de URLS de google ya que no contaba con un banco de imagenes
+
+En la app usamos todas las dependencias de react, sus hooks entre otros
+Es una app bastante interactiva, facil de usar 
+
+NOTA:  Como dije antes, el responsive me falto, pero bueno sera solucionado ya que pienso usar esta app como modelo de portfolio a futuro, asi como arreglar el diseño, que realmente no es lo mio, pero bueno intente hacer lo mejor que puede.
+
+Graicas 
+
+
+<!-- # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
@@ -67,4 +85,4 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 
 ### `npm run build` fails to minify
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify) -->
